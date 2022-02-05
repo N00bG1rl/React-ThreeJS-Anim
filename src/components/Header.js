@@ -6,16 +6,16 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href='#'>Products</a>
+              <a href='/'>Products</a>
             </li>
             <li>
-              <a href='#'>About</a>
+              <a href='/'>About</a>
             </li>
             <li>
-              <a href='#'>Contact</a>
+              <a href='/'>Contact</a>
             </li>
             <li className='shopBtn'>
-              <a href='#'>Shop</a>
+              <a href='/'>Shop</a>
             </li>
           </ul>
         </nav>
