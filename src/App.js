@@ -1,8 +1,9 @@
-import React, { Fragment, Suspense, useRef, useEffect } from 'react'
+import React, { Fragment, Suspense, useRef, useEffect, useState } from 'react'
 import { Html, useProgress } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei/core/useGLTF'
 import { useInView } from 'react-intersection-observer'
+import { a, useTransition } from '@react-spring/web'
 
 import Header from './components/Header'
 import { Section } from './components/Section'
@@ -69,7 +70,27 @@ const HTMLContent = ({
   )
 }
 
+function Loader() {
+  const { active, progress } = useProgress()
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  })
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className='loading' style={{ opacity }}>
+          <div className='loading-bar-container'>
+            <a.div className='loading-bar' style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
+  )
+}
+
 function App() {
+  const [events, setEvents] = useState()
   const domContent = useRef()
   const scrollArea = useRef()
   const onScroll = elem => (state.top.current = elem.target.scrollTop)
@@ -107,7 +128,13 @@ function App() {
           </HTMLContent>
         </Suspense>
       </Canvas>
-      <div className='scrollArea' ref={scrollArea} onScroll={onScroll}>
+      <Loader />
+      <div
+        className='scrollArea'
+        ref={scrollArea}
+        onScroll={onScroll}
+        {...events}
+      >
         <div style={{ position: 'sticky', top: 0 }} ref={domContent}></div>
         <div style={{ height: `${state.sections * 100}vh` }}></div>
       </div>

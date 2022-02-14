@@ -4,8 +4,9 @@ export default function Header() {
   return (
     <header>
       <div className='header-inner'>
-        {/* <div className='logo'>{img}</div> */}
-        <img className='logo' src={Logo} />
+        <a href='https://www.403.ee/'>
+          <img className='logo' src={Logo} />
+        </a>
         <nav>
           <ul>
             <li>
@@ -17,7 +18,7 @@ export default function Header() {
             <li>
               <a href='/'>Contact</a>
             </li>
-            <li className='shopBtn'>
+            <li className='btn'>
               <a href='/'>Shop</a>
             </li>
           </ul>
