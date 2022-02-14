@@ -1,6 +1,6 @@
 # React 3d Animations
 
-Beatiful 3d animation with smooth scroll
+Beautiful 3d animation with smooth scroll.
 
 # Created at
 
