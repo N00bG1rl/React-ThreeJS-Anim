@@ -1,15 +1,17 @@
 import { Fragment } from 'react'
 
-import logo from './logo.svg'
-import './App.css'
-
 import Header from './components/Header'
+import './App.css'
 
 function App() {
   return (
     <Fragment>
       <Header />
-      <img src={logo} className='App-logo' alt='logo' />
+      <div className='container'>
+        <div className='title'>
+          <h1>Start</h1>
+        </div>
+      </div>
     </Fragment>
   )
 }
