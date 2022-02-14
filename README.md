@@ -1,3 +1,29 @@
+# React 3d Animations
+
+Beatiful 3d animation with smooth scroll
+
+# Created at
+
+February 14, 2022
+
+# Project is created with
+
+- React
+- react-hooks
+- React-Spring
+- React-three
+- Three.js
+- react-intersection-observer
+- Sass
+
+# View on browser
+
+## [https://n00bg1rl.github.io/React-ThreeJS-Anim/](https://n00bg1rl.github.io/React-ThreeJS-Anim/)
+
+# View as image
+
+![github](public/github.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
