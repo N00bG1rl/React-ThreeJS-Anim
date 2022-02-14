@@ -1,8 +1,11 @@
+import Logo from '../logoWhite.svg'
+
 export default function Header() {
   return (
     <header>
       <div className='header-inner'>
-        <div className='logo'>Logo</div>
+        {/* <div className='logo'>{img}</div> */}
+        <img className='logo' src={Logo} />
         <nav>
           <ul>
             <li>
