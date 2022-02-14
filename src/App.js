@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 import Header from './components/Header'
 import { Section } from './components/Section'
 import state from './components/State'
-import './App.css'
+import './app.scss'
 
 const Model = ({ modelPath }) => {
   const gltf = useGLTF(modelPath, true)
