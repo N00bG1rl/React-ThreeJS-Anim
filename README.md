@@ -18,7 +18,7 @@ February 14, 2022
 
 # View on browser
 
-## [https://n00bg1rl.github.io/React-ThreeJS-Anim/](https://n00bg1rl.github.io/React-ThreeJS-Anim/)
+## [https://react-three-js-anim.vercel.app/](https://react-three-js-anim.vercel.app/)
 
 # View as image
 
